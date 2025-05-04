@@ -3,6 +3,8 @@ import zipfile
 import pandas as pd
 import numpy as np
 import os
+
+
 # Path to your zip file
 zip_file_path = ".."+os.sep+"Data"+os.sep+"leash-BELKA.zip"
 
@@ -93,15 +95,30 @@ dk=pd.concat([d2,d1],axis=1)
 dk.index=dk.index.str.replace('[Dy]','')
 dk=dk.reset_index() # make molecule_smiles a column of the dataframe
 
-# write out the csv file for 10% of the data
-dk.to_csv('..'+os.sep+'Data'+os.sep+'TenPercData.zip',compression='zip',index=False)
+#stan_mols = dk['molecule_smiles'].apply(standardize_init)
 
-
-
+dk["logP"]=np.nan
+dk["MW"]=np.nan
+dk["rotB"]=np.nan
+dk["HBA"]=np.nan
+dk["nRING"]=np.nan
+dk["TPSA"]=np.nan
 #dk['Morgan_Fingerprint'] = dk['molecule_smiles'].apply(morgan_fingerprint, radius=2, nBits=1024)
+#dk[["logP", "MW", "rotB", "HBA", "HBD", "nRING", "TPSA"]] = dk["molecule_smiles"].apply(calc_mol_properties)
+# write out the csv file for 10% of the data
+#dk.to_csv('..'+os.sep+'Data'+os.sep+'TenPercData.zip',compression='zip',index=False)
+
+'''
+tasks=stan_mols.copy()
+while len(tasks) > 0:
+  for t in tasks:
+    t.run()
+    tasks.remove(t)
+'''
+#
 '''
 stan=np.vectorize(standardize_init)
-#dk['molecule_smiles'] = dk['molecule_smiles'].apply(standardize_init)
+
 
 stan=np.vectorize(standardize_init)
 stan_mols=stan(dk['molecule_smiles'].values)

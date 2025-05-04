@@ -6,7 +6,10 @@ from chembl_structure_pipeline import standardizer
 from rdkit.Chem import Descriptors
 from rdkit.Chem import AllChem
 
+#from jug import TaskGenerator
+
 # set standardize function
+#@TaskGenerator
 def standardize_init(smiles):
     try:
         molecule = Chem.MolFromSmiles(smiles)
@@ -22,6 +25,7 @@ def standardize_init(smiles):
         
         
 # Define a function to calculate the molecular properties
+#@TaskGenerator
 def calc_mol_properties(smiles):
     mol = Chem.MolFromSmiles(smiles)
     logP = Descriptors.MolLogP(mol)
@@ -35,6 +39,7 @@ def calc_mol_properties(smiles):
     return pd.Series([logP, MW, rotB, HBA, HBD, nRING, TPSA])
 
 
+#@TaskGenerator
 def morgan_fingerprint(smiles, radius, nBits):
     mol = Chem.MolFromSmiles(smiles)
     fp = AllChem.GetMorganFingerprintAsBitVect(mol, radius, nBits=nBits)

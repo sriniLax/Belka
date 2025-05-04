@@ -1,0 +1,45 @@
+10 million
+------ Number of molecules binding each protein-----
+Total bindings for BRD4: 99225
+Total bindings for HSA: 44118
+Total bindings for sEH: 29910
+------ Overlapping molecules -----
+Molecules binding to all three: 31
+Molecules binding to BRD4 and HSA only: 93
+Molecules binding to BRD4 and sEH only: 247
+Molecules binding to sEH and HSA only: 9591
+
+
+1.22 million
+------ Number of molecules binding each protein-----
+Total bindings for BRD4: 1722
+Total bindings for HSA: 2486
+Total bindings for sEH: 1666
+------ Overlapping molecules -----
+Molecules binding to all three: 0
+Molecules binding to BRD4 and HSA only: 0
+Molecules binding to BRD4 and sEH only: 1
+Molecules binding to sEH and HSA only: 372
+
+Next 85000
+------ Number of molecules binding each protien-----
+Total bindings for BRD4: 1707
+Total bindings for HSA: 2150
+Total bindings for sEH: 1524
+------ Overlapping molecules -----
+Molecules binding to all three: 0
+Molecules binding to BRD4 and HSA only: 0
+Molecules binding to BRD4 and sEH only: 0
+Molecules binding to sEH and HSA only: 363
+
+
+Combined 2070K
+------ Number of molecules binding each protien-----
+Total bindings for BRD4: 3429
+Total bindings for HSA: 4636
+Total bindings for sEH: 3190
+------ Overlapping molecules -----
+Molecules binding to all three: 0
+Molecules binding to BRD4 and HSA only: 0
+Molecules binding to BRD4 and sEH only: 1
+Molecules binding to sEH and HSA only: 735
